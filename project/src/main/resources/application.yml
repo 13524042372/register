@@ -1,0 +1,30 @@
+server:
+  port: 8080
+spring:
+  rabbitmq:
+    password: cif
+    port: 5672
+    virtual-host: /cif
+    host: 192.168.8.66
+    username: cif
+  cloud:
+    config:
+      enabled:true
+  application:
+    name:
+       project
+jmx:
+  rmi:
+    hostname: 172.27.26.82
+    port: 9090
+eureka:
+  instance:
+    preferIpAddress:true
+    #statusPageUrlPath: ${server.servletPath}/info
+    #healthCheckUrlPath: ${server.servletPath}/health
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: http://172.27.26.82:8081/eureka/
+  
